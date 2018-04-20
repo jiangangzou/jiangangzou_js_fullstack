@@ -15,7 +15,7 @@ city: undefined,
 sendFlower: function(target){
     //1 买花
     var flower = new Flower('满天星');
-    if(typeof target.receiveFlower== 'function')
+    if(typeof target.receiveFlower== 'function') //typeof表示一个返回类型的值，返回target.receiveFlower的函数对象，判断是否未function
     target.receiveFlower(flower,this.name);
     else
         console.log('拿到名企前是不可能谈恋爱的。');
