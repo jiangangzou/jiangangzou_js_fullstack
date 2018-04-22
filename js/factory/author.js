@@ -15,7 +15,10 @@ function Coder(name,languages){
 }
 // new Person 新的对象就是Coder的原型对象
 Coder.prototype = new Person()
-
+Coder.prototype.constructor = Coder
+Coder.prototype.getLanguages = function() {
+    console.log(this.languages)
+}
 var wxf = new Person('汪西发');
 console.log(wxf.name);
 
@@ -23,3 +26,5 @@ var xjy = new Coder('徐加元',['javascript','python','c/c++'])
 console.log(xjy.name + ' ' + xjy.languages.join(','));
 
 console.log(xjy.getName());
+
+console.log(wxf.languages());
